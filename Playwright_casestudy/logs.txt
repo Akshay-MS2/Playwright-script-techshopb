@@ -1,6 +1,6 @@
 
 > playwright_framework@1.0.0 test
-> cross-env FORCE_COLOR=0 cucumber-js --config cucumber-ui.json || exit 0
+> cucumber-js --config cucumber-ui.json || exit 0
 
  Open browser and enter the techshopbd URL executed and status is Pass
 ..Highlighted element with selector "//input[@id="userName"]".
@@ -17,4 +17,4 @@ Highlighted element with selector "//input[@value="Sign Up"]".
 
 3 scenarios (3 passed)
 20 steps (20 passed)
-0m58.132s (executing steps: 0m52.262s)
+0m58.267s (executing steps: 0m52.429s)

@@ -4,7 +4,7 @@
   "description": "Typescript framework with TestRunner",
   "main": "index.js",
   "scripts": {
-    "test": "cross-env FORCE_COLOR=0 cucumber-js --config cucumber-ui.json || exit 0"
+    "test": "cucumber-js --config cucumber-ui.json || exit 0"
   },
   "keywords": [],
   "author": "Akshay",

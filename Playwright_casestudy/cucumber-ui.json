@@ -7,7 +7,7 @@
     "publishQuite": true,
     "dryRun": false,
     "resolveJsonModule": true,
-   
+ 
     "require": ["C:/Playwright_casestudy/tests/stepdef/techshopbd/Automate_techshopbd.step.ts",
     "src/hooks/hooks.ts"],
     "requireModule": ["ts-node/register"],

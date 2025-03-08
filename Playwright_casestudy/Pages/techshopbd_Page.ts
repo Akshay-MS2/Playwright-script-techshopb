@@ -2,13 +2,9 @@ import PlaywrightWrapper from "C:/Playwright_casestudy/Src/PlaywrightWrapper";
 import { Page } from "@playwright/test";
 import { expect } from '@playwright/test';
 export default class TechShopBD {
-  private newPage: Page | null = null;
-  private base: PlaywrightWrapper;
-
   constructor(private page: Page) {
-    this.base = new PlaywrightWrapper(page);
+  this.page=page
   }
-
   private Elements =
     {
       LoginBtn: "//*[text()='Login']",
@@ -38,11 +34,11 @@ export default class TechShopBD {
 
   async openurl(attach: Function) {
     await this.page.context().clearCookies();
-    const baseUrl = "https://techshopbd.com/";
+    const baseUrl = "https://techshopbd.com";
     if (!baseUrl) {
       throw new Error(" SMA environment variable is not defined status is Fail");
     }
-    await this.base.goto(baseUrl);
+    await this.page.goto(baseUrl);
     const image = await this.page.screenshot({ type: 'png' });
     attach(image, "image/png");
     console.log(
@@ -126,9 +122,9 @@ export default class TechShopBD {
 
   async enterFieldsinSignup(attach: Function) {
     await this.page.locator(this.Elements.userName).fill("Akshay")
-    await this.page.locator(this.Elements.email).fill("akshayms0073@gmail.com")
-    await this.page.locator(this.Elements.phonenumber).fill("+8801908908612")
-    await this.page.locator(this.Elements.password).fill("Akshay@123")
+    await this.page.locator(this.Elements.email).fill("akshaytest145453@gmail.com")
+    await this.page.locator(this.Elements.phonenumber).fill("+8801588743215")
+    await this.page.locator(this.Elements.password).fill("Akshay@#123")
     const image = await this.page.screenshot({ type: 'png' });
     attach(image, "image/png");
   }

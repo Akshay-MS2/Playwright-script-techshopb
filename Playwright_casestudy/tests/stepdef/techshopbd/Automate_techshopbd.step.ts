@@ -4,7 +4,6 @@ import TechShopBD from "../../../Pages/techshopbd_Page";
 import { fixture } from "../../../Src/hooks/fixture";
 let TechShopBDpage:TechShopBD ;
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
-TechShopBDpage = new TechShopBD(fixture.page);
 
 
 setDefaultTimeout(60 * 1000 * 20)
@@ -43,7 +42,6 @@ Then('click on SignIn tab and enter the valid credentials and click on SignIn bu
 Given('the user is on the homepage', async function () {
   TechShopBDpage = new TechShopBD(fixture.page);
   await TechShopBDpage.validateHomePage(this.attach);
-
 });
 
 Then('the user should see the Categories section', async function () {
@@ -68,51 +66,49 @@ When('the user click on the product from the search result', async function () {
   await TechShopBDpage.clickProduct(this.attach)
 });
 
-
-
 Then('the product details should be displayed', async function () {
   TechShopBDpage = new TechShopBD(fixture.page);
   await TechShopBDpage.validateProductname(this.attach)
-
 });
+
 When('user selects more than one quantity', async function () {
   TechShopBDpage = new TechShopBD(fixture.page);
   await TechShopBDpage.addQuantity(this.attach)
 });
 
 Then('the user click on the Save to Wishlist button', async function () {
-  TechShopBDpage = new TechShopBD(fixture.page);
+   
   await TechShopBDpage.clickSavetoWishlist(this.attach)
 });
 
 When('the user click on the {string} button', async function (string) {
-  TechShopBDpage = new TechShopBD(fixture.page);
+   
   await TechShopBDpage.clickAddtoCart(this.attach)
 });
 
 
 Then('the product should be added to the cart', async function () {
-  TechShopBDpage = new TechShopBD(fixture.page);
+   
   await TechShopBDpage.GotoCart(this.attach)
 });
 
 Then('verify the cart summary is displayed', async function () {
-  TechShopBDpage = new TechShopBD(fixture.page);
+   
   await TechShopBDpage.validateCartSummary(this.attach)
 });
 
 
 Given('user clicks on profile icon', async function () {
-  TechShopBDpage = new TechShopBD(fixture.page);
+   
   await TechShopBDpage.clickOnProfile(this.attach)
 });
 
 When('the user clicks on Logout button', async function () {
-  TechShopBDpage = new TechShopBD(fixture.page);
+   
   await TechShopBDpage.clickOnLogout(this.attach)
 });
 
 Then('the user should be logged out and redirected to the login page', async function () {
-  TechShopBDpage = new TechShopBD(fixture.page);
+   
   await TechShopBDpage.Loginpage(this.attach)
 });
