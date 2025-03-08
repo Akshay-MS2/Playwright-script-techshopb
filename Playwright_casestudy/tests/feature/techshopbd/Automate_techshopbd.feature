@@ -8,6 +8,10 @@ Feature: Verify that user is able to Sign Up to techshopbd.com and add item to t
     Then enter all the required fields and click on Signup button
     Then verify the verification code message page is displayed
     Then click on SignIn tab and enter the valid credentials and click on SignIn button
+    
+    Examples:
+      |SheetName|TC|
+      |Login|TC01|
 
   @AddtoCart
   Scenario: Validate that the user can search for any product and place an order from the 'Categories'.
@@ -23,8 +27,18 @@ Feature: Verify that user is able to Sign Up to techshopbd.com and add item to t
     Then the product should be added to the cart
     Then verify the cart summary is displayed
 
+    Examples:
+      |SheetName|TC|
+      |Login|TC02|
+
   @Logout
     Scenario: Validate that the user can able to Logout from the application
     Given user clicks on profile icon
     When the user clicks on Logout button
     Then the user should be logged out and redirected to the login page
+    
+    Examples:
+      |SheetName|TC|
+      |Login|TC03|
+
+
